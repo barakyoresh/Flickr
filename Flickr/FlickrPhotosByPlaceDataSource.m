@@ -18,11 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
                                                         maxResults:MAX_RESULTS_TO_SHOW]
                      completion:^(id object, NSError * error) {
                        if (error) {
-                         dispatch_async(dispatch_get_main_queue(), ^{ completion(error); });
+                         completion(error);
+                         return;
                        }
                        NSDictionary *flickrPhotosDict = object;
                        self.flickrPhotos = [flickrPhotosDict mutableArrayValueForKeyPath:FLICKR_RESULTS_PHOTOS];
-                       dispatch_async(dispatch_get_main_queue(), ^{ completion(error); });
+                       completion(error);
                      }];
 }
 

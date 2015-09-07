@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageViewController : UIViewController
+@interface ImageViewController : UIViewController 
 
 // Model for this MVC ... URL of an image to display
 @property (nonatomic, strong) NSURL *imageURL;

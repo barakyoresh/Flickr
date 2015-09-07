@@ -24,8 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
                         fromURL:[FlickrFetcher URLforTopPlaces]
                      completion:^(id object, NSError * error) {
     if (error) {
-      dispatch_async(dispatch_get_main_queue(), ^{ completion(error); });
+      completion(error);
+      return;
     }
+                       
     NSDictionary *flickrPlacesDict = object;
     
     NSArray *places = [flickrPlacesDict mutableArrayValueForKeyPath:FLICKR_RESULTS_PLACES];
@@ -34,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
     
     [self sortPlacesAlphabetically];
     
-    dispatch_async(dispatch_get_main_queue(), ^{ completion(error); });
+    completion(error);
   }];
 }
 
