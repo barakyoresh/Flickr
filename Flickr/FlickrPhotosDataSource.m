@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation FlickrPhotosDataSource
 
-- (NSInteger)numberOfSectionsInDataSource {
+- (NSInteger)numberOfSections {
   return 1;
 }
 

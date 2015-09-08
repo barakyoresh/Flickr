@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
   return [location valueForKeyPath:FLICKR_PLACE_ID];
 }
 
-- (NSInteger)numberOfSectionsInDataSource {
+- (NSInteger)numberOfSections {
   return [self.flickrPlacesByCountryDict count];
 }
 

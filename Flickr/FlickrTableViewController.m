@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-  return [self.dataSource numberOfSectionsInDataSource];
+  return [self.dataSource numberOfSections];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

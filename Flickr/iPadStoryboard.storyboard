@@ -188,7 +188,7 @@
         <!--Recent Photos-->
         <scene sceneID="Dxu-pG-NiX">
             <objects>
-                <tableViewController id="JrQ-f8-VME" customClass="FlickrRecentPhotosTableViewController" sceneMemberID="viewController">
+                <tableViewController id="JrQ-f8-VME" customClass="FlickrCachedPhotosTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0Dr-0I-iHh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

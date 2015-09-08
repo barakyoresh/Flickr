@@ -8,7 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FlickrDataSource : NSObject
 
 // default value 1
-- (NSInteger)numberOfSectionsInDataSource;
+- (NSInteger)numberOfSections;
 
 // default value nil
 - (NSString *)titleForHeaderInSection:(NSUInteger)section;

@@ -23,7 +23,12 @@ NS_ASSUME_NONNULL_BEGIN
                       forIndexPath:(NSIndexPath *)indexPath {
   [super prepareImageViewController:imageViewController forIndexPath:indexPath];
   FlickrPhotosDataSource *imageDataSource = (FlickrPhotosDataSource *) self.dataSource;
+  
   NSDictionary *photo = [imageDataSource photoForRowAtIndexPath:indexPath];
+  [self cachePhoto:photo];
+}
+
+- (void)cachePhoto:(NSDictionary *)photo {
   [FlickrPhotoCacheManager addPhoto:photo ForKey:FLICKR_RECENT_PHOTOS_CHACHE_MANAGER_KEY];
 }
 
